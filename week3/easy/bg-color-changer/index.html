@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg-color-change</title>
+  <style>
+    footer{
+    
+        position: fixed;
+            bottom: 40px;  
+            left: 400px;  
+            right: 400px;  
+            background-color: #F2EFE7;
+            box-shadow: 0px 5px 10px gray;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-radius: 10px; 
+    }
+
+    button{
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #red { background-color: red; color: white; }
+        #yellow { background-color: yellow; color: black; }
+        #blue { background-color: blue; color: white; }
+        #black { background-color: black; color: white; }
+        #purple { background-color: purple; color: white; }
+        #default { background-color: white; color: black; border: 1px solid gray; }
+  </style>
+   
+</head>
+<body>
+
+    <footer>
+        <button onclick="changeColor('red')" id="red">Red</button>
+        <button onclick="changeColor('yellow')" id="yellow" >Yellow</button>
+        <button onclick="changeColor('blue')" id="blue" >Blue</button>
+        <button onclick="changeColor('black')" id="black" >Black</button>
+        <button onclick="changeColor('purple')" id="purple" >Purple</button>
+        <button onclick="changeColor('default')" id="default" >Default</button>
+    </footer>
+  
+<script>
+    // function changeColor(id){
+    //  if (id=="red"){
+    //    document.body.style.backgroundColor = "red";
+    //  }else if(id=="yellow"){
+    //     document.body.style.backgroundColor = "yellow";
+    //  } else if (id=="blue"){
+    //     document.body.style.backgroundColor = "blue";
+    //  }else if (id=="black"){
+    //     document.body.style.backgroundColor  = "black" 
+    //  }else if(id=="purple"){
+    //       document.body.style.backgroundColor  = "purple"
+    //  }else{
+    //     document.body.style.backgroundColor = "white"
+    //  }
+    // }/
+
+    function changeColor(color) {
+            const colors = {
+                red: "red",
+                yellow: "yellow",
+                blue: "blue",
+                black: "black",
+                purple: "purple",
+                default: "white"
+            };
+            document.body.style.backgroundColor = colors[color] || "white";
+        }
+
+</script>
+  
+
+    
+</body>
+</html>
